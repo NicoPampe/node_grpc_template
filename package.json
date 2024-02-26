@@ -1,0 +1,23 @@
+{
+  "name": "node_grpc_template",
+  "version": "1.0.0",
+  "description": "A Template for starting Node projects in a Docker Container with a gRPC server. ",
+  "main": "index.js",
+  "scripts": {
+    "build:server": "tsc",
+    "build": "npm run generate:prisma && npm run build:server",
+    "generate:prisma": "prisma generate",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "echo \"Error: no linter\" && exit 1"
+  },
+  "author": "Nico Pampe",
+  "license": "ISC",
+  "devDependencies": {
+    "prisma": "^5.10.2"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.5.7",
+    "@grpc/proto-loader": "^0.6.9",
+    "grpc-server-reflection": "^0.1.5"
+  }
+}
